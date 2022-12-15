@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import React, { useState, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { ContactService } from '../../../services/ContactService';
 
 const AddContact = () => {
@@ -47,7 +47,7 @@ const AddContact = () => {
     } catch (error) {
       setState({
         ...state,
-        loading:false,
+        loading: false,
         groups: response.data
       })
     }
@@ -68,7 +68,6 @@ const AddContact = () => {
       setState({ ...state, errorMessage: error.message })
       navigate('/contacts/add', { replace: false });
     }
-
   }
 
   let { contact, groups } = state;
@@ -136,7 +135,6 @@ const AddContact = () => {
             </div>
           </div>
         </div>
-
       </section>
     </>
   )

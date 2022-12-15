@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import React, { useState, useEffect } from 'react';
+import { Link, useParams } from 'react-router-dom';
 import { ContactService } from '../../../services/ContactService';
 import Spinner from '../../Navbar/Spinner/Spinner';
 
@@ -11,7 +11,7 @@ const ViewContact = () => {
     loading: false,
     contact: {},
     errorMessage: '',
-    group : {}
+    group: {}
   })
 
   useEffect(() => {
@@ -25,7 +25,7 @@ const ViewContact = () => {
           ...state,
           loading: false,
           contact: response.data,
-          group:groupResponse.data
+          group: groupResponse.data
         })
       };
       getUsers();
@@ -43,7 +43,7 @@ const ViewContact = () => {
 
   }, [contactId])
 
-  let { loading, contact, errorMessage , group} = state;
+  let { loading, contact, errorMessage, group } = state;
 
   return (
     <>
@@ -59,7 +59,7 @@ const ViewContact = () => {
       </section>
       {
         loading ? <Spinner /> : <>
-          {Object.keys(contact).length > 0 && Object.keys(group).length> 0 &&
+          {Object.keys(contact).length > 0 && Object.keys(group).length > 0 &&
             <section className='view-contact mt-3'>
               <div className="container">
                 <div className="row align-items-center">
@@ -95,4 +95,4 @@ const ViewContact = () => {
   )
 }
 
-export default ViewContact
+export default ViewContact;

@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 import { confirm } from "react-confirm-box";
-import { json, Link } from 'react-router-dom'
+import { json, Link } from 'react-router-dom';
 import { ContactService } from '../../../services/ContactService';
 import Spinner from '../../Navbar/Spinner/Spinner';
 
@@ -131,7 +131,6 @@ const ContactList = () => {
                                         )
                                     })
                                 }
-
                             </div>
                         </div>
                     </section>
